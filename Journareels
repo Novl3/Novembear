@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reels with Scroll and Frame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-title">JOURNAREELS</div>
+        <button class="add-video-button">
+            <span class="icon">+</span> Add Video
+        </button>
+    </nav>
+
+
+    <div class="reels-container">
+        <div class="reel">
+            <div class="video-frame">
+                <video src="d.mp4" autoplay loop></video>
+                <div class="upload-date">Upload Date: November 30, 2024</div>
+                <button class="mute-toggle">🔊</button>
+            </div>
+        </div>
+        <div class="reel">
+            <div class="video-frame">
+                <video src="a.mp4" autoplay loop></video>
+                <div class="upload-date">Upload Date: November 23, 2024</div>
+                <button class="mute-toggle">🔊</button>
+            </div>
+        </div>
+        <div class="reel">
+            <div class="video-frame">
+                <video src="b.mp4" autoplay loop></video>
+                <div class="upload-date">Upload Date: November 6, 2024</div>
+                <button class="mute-toggle">🔊</button>
+            </div>
+        </div>
+        <div class="reel">
+            <div class="video-frame">
+                <video src="c.mp4" autoplay loop></video>
+                <div class="upload-date">Upload Date: November 7, 2024</div>
+                <button class="mute-toggle">🔊</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
