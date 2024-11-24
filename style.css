@@ -1,0 +1,155 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('gold.jpg');
+    color: #fff;
+    overflow: hidden; /* Prevent default browser scrollbars */
+}
+.navbar {
+    width: 100%;
+    height: 32px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ccff;
+}
+
+.add-video-button {
+    background-color: #00ccff;
+    color: #111;
+    border: none;
+    padding: 2px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 25px;
+}
+
+.add-video-button .icon {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.add-video-button:hover {
+    background-color: #00aacc;
+}
+
+/* Container for Reels */
+.reels-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full screen height */
+    overflow-y: scroll; /* Vertical scroll for reels */
+    scroll-snap-type: y mandatory; /* Snap to each reel on scroll */
+}
+
+.reel {
+    flex: 0 0 100%; /* Take up full viewport height */
+    height: 100vh;
+    scroll-snap-align: start; /* Align each reel at the top when scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('gold.jpg');
+    position: relative;
+}
+
+/* Video Frame */
+.video-frame {
+    width: 50%; /* Frame width */
+    height: 90%; /* Frame height */
+    border: 8px solid #00ccff; /* Gold border around the frame */
+    border-radius: 20px; /* Rounded corners for the frame */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8); /* Shadow for 3D effect */
+    overflow: hidden; /* Clip content to fit within the frame */
+    background: linear-gradient(135deg, #444, #555); /* Subtle gradient background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Video Styling */
+.video-frame video {
+    width: 85%; /* Full width of the frame */
+    height: 100%; /* Full height of the frame */
+    object-fit: cover; /* Ensure video covers the frame area */
+}
+
+/* Scrollbar Customization (Optional) */
+.reels-container::-webkit-scrollbar {
+    width: 20px;
+}
+
+.reels-container::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+    
+}
+
+.upload-date {
+    position: absolute; /* Position relative to the frame */
+    bottom: 10px; /* Place at the bottom of the frame */
+    right: 10px; /* Align to the right */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #ffd700; /* Gold text color to match the frame */
+    font-size: 14px; /* Adjust font size */
+    padding: 5px 10px; /* Add padding for better readability */
+    border-radius: 5px; /* Rounded corners for the label */
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+}
+.control-panel {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+/* Mute Button Styling */
+.mute-toggle {
+    position: absolute;
+    top: 15px; /* Top of the video */
+    right: 5px; /* Right side of the video */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mute-toggle:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Ensure video frame is relative for proper positioning */
+.video-frame {
+    position: relative; /* Required for absolute positioning of button */
+}
+
