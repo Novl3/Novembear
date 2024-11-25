@@ -1,2 +1,0 @@
-# Novembear
-pogi lang
