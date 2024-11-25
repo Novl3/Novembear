@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../CSS/stylesheet.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <button id="homeButton">
+                <img src="..//images/logo.jpg" alt="Logo" class="logo-image">
+            </button>
+        </div>
+        <nav class="navigation">
+            <button class="nav-button" data-section="projects">Projects</button>
+            <button class="nav-button" data-section="home">Home</button>
+            <button class="nav-button" data-section="about">About</button>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section active">
+            <div class="home-content">
+                <div style="text-align: center;">
+                    <img src="../images/me.jpg" alt="Profile Picture" id="profileImage">
+                    <div>
+                      <button onclick="previousImage()">Previous</button>
+                      <button onclick="viewImage()">View</button>
+                      <button onclick="nextImage()">Next</button>
+                    </div>
+                  </div>
+                  <div id="fullscreenModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 1000;">
+                    <span onclick="closeModal()" style="position: absolute; top: 10px; right: 20px; font-size: 30px; color: white; cursor: pointer;">&times;</span>
+                    <img id="fullscreenImage" style="margin: auto; display: block; max-width: 100%; max-height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <button onclick="previousImageModal()" style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; font-size: 20px; padding: 10px; cursor: pointer;">&#9664;</button>
+                    <button onclick="nextImageModal()" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; font-size: 20px; padding: 10px; cursor: pointer;">&#9654;</button>
+                  </div>
+                <div class="text-box">
+                    <h1>Gervacio Virgilio P.</h1>
+                    <p>
+                        An aspiring IT professional with a passion for problem-solving and programming. 
+                        Skilled in integrative solutions, Gervacio is always eager to learn new technologies 
+                        and take on challenges in software development.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="section hidden">
+            <div class="about-container">
+                <div class="about-photo">
+                    <img src="../images/me5.jpg" alt="My Profile Picture" class="profile-image">
+                </div>
+                <div class="about-details">
+                    <h1>About Me</h1>
+                    <p>
+                        Hi, I'm Gervacio Virgilio P. An aspiring IT professional with a passion for problem-solving and programming. I am always looking for new challenges to enhance my skills and learn new technologies. Here's a bit about who I am:
+                    </p>
+                    <div class="skills">
+                        <h2>Skills & Expertise</h2>
+                        <ul>
+                            <li>Software Development (Web and Mobile)</li>
+                            <li>Problem-solving and Analytical Thinking</li>
+                            <li>Integrative Programming</li>
+                            <li>Experience with JavaScript, HTML, CSS, and PHP</li>
+                            <li>Appliance Repair and Troubleshooting</li>
+                        </ul>
+                    </div>
+                    <div class="more-info">
+                        <h2>Additional Information</h2>
+                        <p>
+                            I have experience in creating dynamic websites and web applications, and I’m constantly working to improve my skills in software development. I enjoy working on projects that help solve real-world problems and enhance the user experience. In my free time, I like to engage in hands-on work, such as repairing electronics and experimenting with new technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section hidden">
+            <h1>My Projects</h1>
+            <div class="project-container">
+                <div class="project">
+                    <img src="../images/proj.jpg" alt="Project 1 Image" class="project-image">
+                    <div class="project-details">
+                        <h2>Journareels</h2>
+                        <p>A personal website showcasing my skills. It's a reels that you can personally add a videos of you and serves as a diary.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="content">
+            <button class="button" onclick="changeBackground()">Change Background</button>
+        </div>
+    </main>
+    <script src="../JS/js.js"></script>
+    <div class="custom-cursor"></div>
+</body>
+</html>
